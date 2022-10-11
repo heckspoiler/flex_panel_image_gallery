@@ -1,0 +1,115 @@
+html {
+    box-sizing: border-box;
+    background: #89beff;
+    font-family: 'Questrial', sans-serif;
+    font-size: 20px;
+    font-weight: 00;
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+  }
+  
+  body {
+    margin: 0;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  .panels {
+    display: flex;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+
+
+  .panel {
+    background-color: white;
+    box-shadow: inset 0 0 0 5px rgba(255,255,255,0.1);
+    color: white;
+    text-align: center;
+    align-items: center;
+    /* Safari transitionend event.propertyName === flex */
+    /* Chrome + FF transitionend event.propertyName === flex-grow */
+    transition:
+      font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+      flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+      background 0.2s;
+    font-size: 20px;
+    background-size: cover;
+    background-position: center;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .panel1 { background-image:url(https://preview.redd.it/b430fjkaqg051.png?width=940&format=png&auto=webp&s=3cfe1752d40f28d50d572f96530fcc88509e9064);
+    filter: grayscale(); 
+    }
+  .panel2 { background-image:url(https://uproxx.com/wp-content/uploads/2022/09/asap-rocky-new-album.jpeg?w=1024&h=438&crop=1);
+filter: grayscale(); }
+  .panel3 { background-image:url(https://www.musikexpress.de/wp-content/uploads/2022/07/28/15/gettyimages-841024736-scaled-e1659015563953-992x560.jpg);
+    filter: grayscale(); }
+  .panel4 { background-image:url(https://rockawaybeach.ch/app/uploads/2019/10/tylerthecreatorigor.jpg); filter: grayscale(); }
+  .panel5 { background-image:url(https://i1.sndcdn.com/artworks-ZJhFZyg8PFvzgfPX-1zIm7g-t500x500.jpg); filter: grayscale();}
+
+.panel1:hover {
+    filter: none;
+}
+
+.panel2:hover {
+    filter: none;
+}
+
+.panel3:hover {
+    filter: none;
+}
+
+.panel4:hover {
+    filter: none;
+}
+
+.panel5:hover {
+    filter: none;
+}
+  /* Flex Children */
+  .panel > * {
+    margin: 0;
+    width: 100%;
+    transition: transform 0.5s;
+    flex: 1 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.panel > *:first-child {transform: translateY(-100%);}
+.panel.open-active > *:first-child {transform: translateY(0);}
+.panel > *:last-child {transform: translateY(100%);}
+.panel.open-active > *:last-child {transform: translateY(0);}
+
+
+
+
+  .panel p {
+    text-transform: uppercase;
+    font-family: 'IBM Plex Mono', monospace;
+    
+    font-size: 2.8em;
+    -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+  color: transparent;
+  }
+  
+  .panel p:nth-child(2) {
+    font-size: 4em;
+  }
+
+  .panel.open {
+    font-size: 30px;
+    flex: 5;
+  }
